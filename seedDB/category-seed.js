@@ -18,15 +18,15 @@ async function seedDB() {
 
   async function closeDB() {
     console.log("CLOSING CONNECTION");
+    await seedCateg("Iphone");
+    await seedCateg("Samsung");
+    await seedCateg("Oppo");
+    await seedCateg("Xiaomi");
+    await seedCateg("VIVO");
+    await seedCateg("Realme");
     await mongoose.disconnect();
   }
-  await seedCateg("Backpacks");
-  await seedCateg("Briefcases");
-  await seedCateg("Mini Bags");
-  await seedCateg("Large Handbags");
-  await seedCateg("Travel");
-  await seedCateg("Totes");
-  await seedCateg("Purses");
+
   await closeDB();
 }
 
